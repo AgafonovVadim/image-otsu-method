@@ -255,7 +255,7 @@ jobs:
         run: |
           Get-ChildItem -Recurse -Path ..
           git commit -m "Automatically upload workflow results"
-          git push --force origin HEAD:${{ github.ref_name }}
+          git push origin ${{ github.ref_name }}
       
       - name: update_readme
         id: update_readme
