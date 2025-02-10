@@ -38,7 +38,7 @@ jobs:
         id: install_deps
         run: | 
           $lvl = If (((Get-ChildItem -Path .. -Include @('main.c', 'main.cpp') -Recurse -ErrorAction SilentlyContinue -Force).FullName).Length -ne 0) {"test"} 
-                  Else {"invalid"} }
+                  Else {"invalid"}
           echo "lvl=$lvl" >> $env:GITHUB_OUTPUT
           if ('${{ matrix.os }}' -eq 'windows-latest')
           {
@@ -67,7 +67,7 @@ jobs:
           customReadmeFile: |
             # Test log [windows]
            
-            ## More info and test log [ubuntu] in Github.Actions: [![statusbadge](../../actions/workflows/buildtest.yaml/badge.svg?branch=main&event=pull_request)](../../actions/workflows/buildtest.yaml)
+            ## More info and test log [ubuntu] in Github.Actions: [![statusbadge](../../actions/workflows/buildtest.yaml/badge.svg?branch=main&event=push)](../../actions/workflows/buildtest.yaml)
                     
             ### Precompile failed (build log):
             ```
@@ -119,7 +119,7 @@ jobs:
           customReadmeFile: |
             # Test log [windows]
            
-            ## More info and test log [ubuntu] in Github.Actions: [![statusbadge](../../actions/workflows/buildtest.yaml/badge.svg?branch=main&event=pull_request)](../../actions/workflows/buildtest.yaml)
+            ## More info and test log [ubuntu] in Github.Actions: [![statusbadge](../../actions/workflows/buildtest.yaml/badge.svg?branch=main&event=push)](../../actions/workflows/buildtest.yaml)
                     
             ### Compile failed (build log):
             ```
@@ -264,7 +264,7 @@ jobs:
           customReadmeFile: |
             # Test log [windows]
            
-            ## More info and test log [ubuntu] in Github.Actions: [![statusbadge](../../actions/workflows/buildtest.yaml/badge.svg?branch=main&event=pull_request)](../../actions/workflows/buildtest.yaml)
+            ## More info and test log [ubuntu] in Github.Actions: [![statusbadge](../../actions/workflows/buildtest.yaml/badge.svg?branch=main&event=push)](../../actions/workflows/buildtest.yaml)
 
             Build log (can be empty):
             ```
