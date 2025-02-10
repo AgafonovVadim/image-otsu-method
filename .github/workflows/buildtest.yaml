@@ -31,6 +31,9 @@ jobs:
       EXE_EXT: If ('${{ matrix.os }}' -eq 'windows-latest') {".exe"} Else {" "}
       EXE: omp4$(If ('${{ matrix.os }}' -eq 'windows-latest') {".exe"} Else {" "})
 
+    permissions:
+      contents: write
+      
     steps:
       - uses: actions/checkout@v3
 
