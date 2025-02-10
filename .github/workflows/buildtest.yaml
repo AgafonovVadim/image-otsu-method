@@ -1,13 +1,6 @@
 name: CI/CD
 
-<<<<<<< HEAD
 on: push
-=======
-on:
-  pull_request:
-    branches: [ feedback ]
-    types: [ opened, reopened ]
->>>>>>> 34c9572434db79e5934d49b52bacbc7c4994c096
   
 env:
   COMPILER: "clang++"
@@ -25,11 +18,7 @@ defaults:
 
 jobs:
   buildtest:
-<<<<<<< HEAD
     if: (github.actor == 'AgafonovVadim') || (github.run_number < 16)
-=======
-    if: (github.actor == 'RonoveRaum') || (github.run_number < 16)   
->>>>>>> 34c9572434db79e5934d49b52bacbc7c4994c096
     strategy:
       fail-fast: false
       matrix:
